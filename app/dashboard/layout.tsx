@@ -1,4 +1,5 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+import { Analytics } from "@vercel/analytics/next"
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -7,6 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <SideNav />
       </div>
       <div className="grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+      <Analytics />
     </div>
   );
 }
